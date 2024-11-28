@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICE CREAM</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="icon" href="pictures/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <!-- //לחלון הקופץ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+</head>
+
+<body>
+    <script src="game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <div id="timerDisplay">TIMER: 0</div>
+    <div id="cups">
+        <p id="pLevel"></p>
+        <img class="cupImg" src="pictures/coneSilver1.png" alt="cup">
+        <img class="cupImg" src="pictures/coneSilver1.png" alt="cup">
+        <img class="cupImg" src="pictures/coneSilver1.png" alt="cup">
+        <img class="cupImg" src="pictures/coneSilver1.png" alt="cup">
+    </div>
+    <div id="modes">
+        <button id="btnP">play</button>
+        <button id="btnS">stop</button><br>
+        <button id="btnE">end</button>
+        <button id="btnC">clear</button><br>
+        <button id="btnCHA">changeLevel</button>
+        <button id="btnM">music</button>
+    </div>
+    <div id="gamePoints">
+        <h3>YOUR ICE CREAMS</h3>
+
+        <div id="iceCreamProces">
+        </div>
+    </div>
+
+    <div id="yourIceCream"><img id="imgC" src=""><img id="imgB" src=""><img id="imgA" src="">הרכיבים שבחרת </div>
+    <div id="containerCategory">
+        <div class="divImg"> <img src="pictures/cone.png" alt="Iconcone" class="img">
+            <img src="pictures/cones/cone1.png" alt="cone1" class="img"><img src="pictures/cones/cone2.png" alt="cone2"
+                class="img">
+            <img src="pictures/cones/cone3.png" alt="cone3" class="img">
+            <img src="pictures/cones/cone4.png" alt="cone4" class="img">
+        </div>
+
+        <div class="divImg"><img src="pictures/ball.png" alt="Iconball" class="img">
+            <img src="pictures/balls/blu1e.png" alt="ballblue" class="img"><img src="pictures/balls/bro2n.png"
+                alt="ballbrown" class="img"><img src="pictures/balls/gre3n.png" alt="ballgreen" class="img">
+            <img src="pictures/balls/pin4k.png" alt="ballpink" class="img"><img src="pictures/balls/pur5e.png"
+                alt="ballpurple" class="img"><img src="pictures/balls/yel6w.png" alt="ballyellow" class="img">
+        </div>
+        <div class="divImg"><img src="pictures/add.png" alt="Iconadd" class="img">
+            <img src="pictures/adds/beig1.png" alt="addsbeige-nuts" class="img">
+            <img src="pictures/adds/blue2.png" alt="addsblueberries" class="img">
+            <img src="pictures/adds/brow3.png" alt="addsbrown-nuts" class="img">
+            <img src="pictures/adds/cand4.png" alt="addscandies" class="img">
+            <img src="pictures/adds/conc5.png" alt="addsconcours" class="img">
+            <img src="pictures/adds/gree6.png" alt="addsgreen-almonds" class="img">
+            <img src="pictures/adds/leaf7.png" alt="addsleaf" class="img">
+            <img src="pictures/adds/stra8.png" alt="addsstrawberries" class="img">
+            <img src="pictures/adds/almo9.png" alt="addssalmonds" class="img">
+        </div>
+    </div>
+
+
+    <div id="blinkingText" style="visibility: hidden;">אני מכין עכשיו ל</div>
+    <section id="thepepole"></section>
+</body>
+
+</html>

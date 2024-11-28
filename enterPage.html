@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICE CREAM LOGIN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+    <link rel="stylesheet" href="enterPage.css">
+</head>
+
+<body>
+    <script src="enterPage.js"></script>
+    <!-- טופס כניסה -->
+    <div id="loginForm" class="form">
+        <h2>כניסה</h2>
+        <form id="login">
+            <input type="text" id="user" placeholder="שם משתמש" required>
+            <input type="password" id="pass" placeholder="סיסמא" required>
+            <button type="submit">כניסה</button>
+            <div id="loginErr" class="error"></div>
+        </form>
+        <!-- לחצן של החלפת מצב -->
+        <button class="toggle-button" id="toRegister">אין לך חשבון? הירשם עכשיו!</button>
+    </div>
+
+    <!-- טופס הרשמה -->
+    <div id="registerForm" class="form" style="display:none;">
+        <h2>הרשמה</h2>
+        <form id="register">
+            <input type="text" id="userReg" placeholder="שם משתמש" required>
+            <input type="password" id="passReg" placeholder="סיסמא" required>
+            <button type="submit">הרשמה</button>
+            <div id="registerErr" class="error"></div>
+        </form>
+        <button class="toggle-button" id="toLogin">כבר יש לך חשבון? התחבר!</button>
+    </div>
+</body>
+
+</html>

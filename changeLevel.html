@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICE CREAM LEVEL</title>
+    <link rel="icon" href="pictures/favicon.ico">
+</head>
+<style>
+       body {
+            background-image: url(pictures/b.png);
+            font-family: "Amatic SC";
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: pink;
+            height: 100%;
+        }
+        div
+            {
+            text-align: center;
+            height: 100%;
+            background-color: rgb(232, 128, 161);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20%;
+        }
+        button {
+            font-family: "Amatic SC";
+            background-color: #da347f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+</style>
+<body>
+    <div>
+        <button id="level1">רמה 1</button>
+        <button id="level2">רמה 2</button>
+        <button id="level3">רמה 3</button>
+    </div>
+    <script>
+        let users = JSON.parse(localStorage.getItem('arrUser'));
+        let currentUserId = parseInt(JSON.parse(localStorage.getItem('currentUser')));
+        let level;
+
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].id == currentUserId) {
+                level = users[i].level;
+            }
+        }
+        document.querySelector('#level1').addEventListener('click', () => {
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].id == currentUserId) {
+                    users[i].level = 1;
+                    localStorage.setItem('arrUser', JSON.stringify(users));
+                }
+            }
+            window.location.href = 'game.html';
+        });
+        document.querySelector('#level2').addEventListener('click', () => {
+            if (level >= 2) {
+                for (let i = 0; i < users.length; i++) {
+                    if (users[i].id == currentUserId) {
+                        users[i].level = 2;
+                        localStorage.setItem('arrUser', JSON.stringify(users));
+                    }
+                }
+                window.location.href = 'game.html';
+            }
+
+            else
+                document.querySelector('#level2').disabled = disabaled;
+
+        });
+        document.querySelector('#level3').addEventListener('click', () => {
+            if (level == 3) {
+                for (let i = 0; i < users.length; i++) {
+                    if (users[i].id == currentUserId) {
+                        users[i].level = 3;
+                        localStorage.setItem('arrUser', JSON.stringify(users));
+                    }
+                }
+                window.location.href = 'game.html';
+            }
+
+            else
+                document.querySelector('#level3').disabled = disabaled;
+        });
+
+
+    </script>
+</body>
+
+</html>
